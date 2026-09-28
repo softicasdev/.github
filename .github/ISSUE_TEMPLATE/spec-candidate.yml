@@ -1,0 +1,66 @@
+name: Spec candidata
+description: Propuesta de funcionalidad o cambio que puede convertirse en una spec.
+title: "[spec] "
+labels: ["type:spec", "status:backlog"]
+body:
+  - type: dropdown
+    id: modulo
+    attributes:
+      label: Módulo
+      options:
+        - gabinete
+        - pacientes
+        - pedidos
+        - caja
+        - productos
+        - inventario
+        - precios
+        - proveedores
+        - compras
+        - obras-sociales
+        - profesionales
+        - sucursales
+        - usuarios
+        - roles-permisos
+        - ventas
+        - facturacion
+        - tesoreria
+        - contabilidad
+        - reportes
+        - dashboard
+        - importaciones
+        - core
+    validations:
+      required: true
+  - type: input
+    id: problema
+    attributes:
+      label: Problema en una frase
+      placeholder: "Hoy no se puede ... y eso provoca ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: solicitante
+    attributes:
+      label: Quién lo pidió
+      options:
+        - cliente
+        - óptica
+        - interno
+    validations:
+      required: true
+  - type: input
+    id: notion
+    attributes:
+      label: Referencias Notion
+      description: Casos de uso, reglas de negocio y diagramas de flujo relacionados.
+      placeholder: "CU-nn, RN-nn, DF-nn"
+    validations:
+      required: false
+  - type: input
+    id: exito
+    attributes:
+      label: Criterio de éxito (una línea)
+      placeholder: "Se considera resuelto cuando ..."
+    validations:
+      required: true

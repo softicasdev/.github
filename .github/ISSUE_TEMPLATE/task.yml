@@ -1,0 +1,45 @@
+name: Tarea
+description: Tarea técnica derivada de una spec, acotada a un repo.
+title: "[NNN] "
+labels: ["type:task", "status:backlog"]
+body:
+  - type: input
+    id: spec
+    attributes:
+      label: Spec
+      placeholder: "NNN (p. ej. 007)"
+    validations:
+      required: true
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Repo afectado
+      options:
+        - softicas-backend
+        - softicas-frontend-app
+        - softicas-frontend-landing
+        - softicas-harness
+    validations:
+      required: true
+  - type: input
+    id: rf
+    attributes:
+      label: RF cubiertos
+      placeholder: "RF-01, RF-03"
+    validations:
+      required: true
+  - type: textarea
+    id: hecho
+    attributes:
+      label: Hecho cuando
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: input
+    id: bloqueos
+    attributes:
+      label: Bloqueada por
+      description: Issues que deben cerrarse antes (org/repo#N). Vacío si no hay.
+      placeholder: "softicasdev/softicas-backend#123"
+    validations:
+      required: false

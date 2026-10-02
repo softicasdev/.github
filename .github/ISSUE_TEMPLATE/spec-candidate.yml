@@ -29,6 +29,7 @@ body:
         - reportes
         - dashboard
         - importaciones
+        - notificaciones
         - core
     validations:
       required: true

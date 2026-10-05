@@ -8,12 +8,16 @@ body:
     attributes:
       label: Módulo
       options:
+        - alta-cliente
+        - auth
         - gabinete
         - pacientes
         - pedidos
+        - pedidos-proveedores
         - caja
         - productos
         - inventario
+        - impuestos
         - precios
         - proveedores
         - compras
@@ -23,13 +27,17 @@ body:
         - usuarios
         - roles-permisos
         - ventas
+        - comisiones
         - facturacion
         - tesoreria
+        - tarjetas
         - contabilidad
         - reportes
+        - reparaciones
         - dashboard
         - importaciones
         - notificaciones
+        - suscripcion
         - core
     validations:
       required: true
